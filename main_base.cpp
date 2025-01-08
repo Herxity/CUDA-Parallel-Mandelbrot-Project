@@ -144,8 +144,8 @@ void write_png(const char* filename, uint32_t* pixels, int w, int h) {
 
 
 int main() {
-    const int w = 3840;  // Width for 4K
-    const int h = 2160;  // Height for 4K
+    const long w = 3840*4;  // Width for 4K * 4
+    const long h = 2160*4;  // Height for 4K * 4
     uint32_t* mandelbrot_counts = new uint32_t[w * h];
     uint32_t* pixels = new uint32_t[w * h];
     uint32_t colors[64];
